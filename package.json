@@ -1,0 +1,27 @@
+{
+  "name": "playwright_framework_pavan_2025",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:master": "playwright test --grep @master",
+    "test:sanity": "playwright test --grep @sanity",
+    "test:regression": "playwright test --grep @regression",
+    "test:datadriven:headed": "playwright test --grep @datadriven --headed",
+    "test:master:headed": "playwright test --grep @master --headed",
+    "test:endtoend:headed": "playwright test --grep @end-to-end --headed",
+    "test:sanity:debug": "playwright test --grep @sanity --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.3.0",
+    "allure-playwright": "^3.3.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "csv-parse": "^6.1.0"
+  }
+}
