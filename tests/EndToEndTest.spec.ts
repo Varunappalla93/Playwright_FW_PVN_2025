@@ -97,7 +97,7 @@ async function performLogout(page: Page) {
     expect(await logoutPage.isContinueButtonVisible()).toBe(true);
 
     // Click "Continue" and verify redirection to HomePage
-    const homePage:HomePage = await logoutPage.clickContinue();
+    const homePage: HomePage = await logoutPage.clickContinue();
     expect(await homePage.isHomePageExists()).toBe(true);
 }
 
@@ -141,7 +141,7 @@ async function addProductToCart(page: Page) {
 
     // Select product and set quantity
     // const logoutPage: LogoutPage = await myAccountPage.clickLogout();
-    const productPage:ProductPage|null = await searchResultsPage.selectProduct(productName);
+    const productPage: ProductPage | null = await searchResultsPage.selectProduct(productName);
     await productPage?.setQuantity(productQuantity);
     await productPage?.addToCart();  // Add product to shopping cart
 
@@ -163,7 +163,7 @@ async function verifyShoppingCart(page: Page) {
     console.log("🛒 Navigated to shopping cart!");
 
     const config = new testconfig();
-    
+
     // Validate that total price is correct (based on config)
     expect(await shoppingCartPage.getTotalPrice()).toBe(config.totalPrice);
 }
@@ -174,3 +174,8 @@ async function performCheckout(page: Page) {
     // Checkout feature is not implemented since it's a demo site.
     // Place your checkout flow logic here if backend is available.
 }
+
+
+// if git push to remote repo fails, use the below
+// git remote set-url origin https://<token>@github.com/<username>/<reponame>
+// Eg: git remote set-url origin https://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@github.com/Varunappalla93/Playwright_FW_PVN_2025
