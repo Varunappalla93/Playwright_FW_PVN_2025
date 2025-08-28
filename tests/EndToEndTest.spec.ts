@@ -178,4 +178,4 @@ async function performCheckout(page: Page) {
 
 // if git push to remote repo fails, use the below and then use push command 
 // git remote set-url origin https://<token_name>@github.com/<username>/<reponame> 
-// Eg: git remote set-url origin https://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@github.com/Varunappalla93/Playwright_FW_PVN_2025
+// Eg: git remote set-url origin https://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@github.com/Varunappalla93/Playwright_FW_PVN_2025
